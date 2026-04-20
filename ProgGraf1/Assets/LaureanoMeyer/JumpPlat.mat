@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: GhostMaterial
-  m_Shader: {fileID: 4800000, guid: eddb3d2e4228ca74d827870cf5dcc62f, type: 3}
+  m_Name: JumpPlat
+  m_Shader: {fileID: 4800000, guid: 755e4d2efeb65ba41ae4e02aae56e625, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -61,33 +61,28 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _ASEOutlineWidth: 0.02
-    - _Bias: 0.37
     - _BumpScale: 1
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
-    - _FadeScale: -1
+    - _FadeScale: 1
+    - _FadeScale1: 1.16
+    - _Frequency: 1
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
     - _Metallic: 0
     - _Mode: 0
     - _OcclusionStrength: 1
-    - _Offset: 0.66
     - _Parallax: 0.02
-    - _Power: 1.09
-    - _Scale: -0.07
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
+    - _Speed: 1
     - _SrcBlend: 1
     - _UVSec: 0
     - _ZWrite: 1
     - __dirty: 0
     m_Colors:
-    - _ASEOutlineColor: {r: 0.64627093, g: 0.9716981, b: 0.96532494, a: 0}
-    - _BaseCOlor: {r: 0.6853863, g: 0.86941886, b: 0.9622642, a: 0}
-    - _CenterColor: {r: 0.85898006, g: 0.9083606, b: 0.9150943, a: 0}
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Color: {r: 0, g: 0.7166667, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
   m_BuildTextureStacks: []
