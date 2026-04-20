@@ -7,8 +7,10 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: MAT_Robot_Metal
-  m_Shader: {fileID: 4800000, guid: 2b558eb8b2a2bf240aebd2da4514b7a0, type: 3}
+  m_Name: MAT_Robot_Holograma
+  m_Shader: {fileID: 4800000, guid: edc9c83ad0fb1554cb39aa8b0a2e930b, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
   m_InvalidKeywords: []
   m_LightmapFlags: 0
@@ -17,6 +19,7 @@ Material:
   m_CustomRenderQueue: -1
   stringTagMap: {}
   disabledShaderPasses: []
+  m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
