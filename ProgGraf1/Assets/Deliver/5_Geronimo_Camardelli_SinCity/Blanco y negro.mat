@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Andoide
+  m_Name: Blanco y negro
   m_Shader: {fileID: 4800000, guid: 280abc4ba4274a54dafc9013abefe3d2, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -24,7 +24,11 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _Texture0:
-        m_Texture: {fileID: 2800000, guid: 30905ae73481e354e8b58c7505eff10d, type: 3}
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Texture1:
+        m_Texture: {fileID: 2800000, guid: 14fbeebef2ed6094483d60b9041036bb, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _texcoord:
@@ -34,9 +38,12 @@ Material:
     m_Ints: []
     m_Floats:
     - _Float0: 3
-    - _Float1: 0.64
-    - _Float2: 0.483
-    - _Float3: 0.835
+    - _Float1: 0.248
+    - _Float2: 0.474
+    - _Float3: 0.686
+    - _Sombra1: 0.6507648
+    - _Sombra2: 0.236
+    - _Sombra3: 0.474
     - __dirty: 0
     m_Colors:
     - _Color0: {r: 1, g: 1, b: 1, a: 0}
