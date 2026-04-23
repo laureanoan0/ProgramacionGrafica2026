@@ -4,11 +4,11 @@ Shader "Ghost"
 {
 	Properties
 	{
-		_BaseCOlor("BaseCOlor", Color) = (0.1817818,0.8250467,0.8962264,0)
+		_CenterColor("CenterColor", Color) = (0.1817818,0.8250467,0.8962264,0)
 		_Bias("Bias", Float) = 0
 		_Power("Power", Float) = 1
 		_Scale("Scale", Float) = 1.66
-		_CenterColor("CenterColor", Color) = (1,1,1,0)
+		_MainColor("MainColor", Color) = (1,1,1,0)
 		_FadeScale("FadeScale", Float) = 6
 		[HideInInspector] __dirty( "", Int ) = 1
 	}
@@ -28,7 +28,7 @@ Shader "Ghost"
 		};
 
 		uniform float4 _CenterColor;
-		uniform float4 _BaseCOlor;
+		uniform float4 _MainColor;
 		uniform float _Bias;
 		uniform float _Power;
 		uniform float _Scale;
@@ -46,7 +46,7 @@ Shader "Ghost"
 			float3 ase_worldNormal = i.worldNormal;
 			float fresnelNdotV3 = dot( ase_worldNormal, ase_worldViewDir );
 			float fresnelNode3 = ( _Bias + _Power * pow( 1.0 - fresnelNdotV3, _Scale ) );
-			float4 lerpResult4 = lerp( _CenterColor , _BaseCOlor , fresnelNode3);
+			float4 lerpResult4 = lerp( _CenterColor , _MainColor , fresnelNode3);
 			float3 ase_vertex3Pos = mul( unity_WorldToObject, float4( i.worldPos , 1 ) );
 			float Transparency25 = ( 1.0 - saturate( ( ( ase_vertex3Pos.y - (-0.4 + (sin( _Time.y ) - -2.0) * (1.0 - -0.4) / (2.0 - -2.0)) ) / _FadeScale ) ) );
 			float4 Color29 = ( lerpResult4 * Transparency25 );
@@ -60,7 +60,7 @@ Shader "Ghost"
 }
 /*ASEBEGIN
 Version=18900
-320;73;1232;679;2723.792;992.9879;3.34948;True;False
+302;73;969;682;2301.304;376.9623;1.030709;True;False
 Node;AmplifyShaderEditor.CommentaryNode;24;-2470.016,763.6343;Inherit;False;2073.071;593.4011;Mueve la extension de la textura de arriba a abajo;10;25;23;22;20;18;21;13;31;42;44;;1,1,1,1;0;0
 Node;AmplifyShaderEditor.SimpleTimeNode;31;-2418.078,1124.382;Inherit;False;1;0;FLOAT;1;False;1;FLOAT;0
 Node;AmplifyShaderEditor.SinOpNode;42;-2209.34,1087.597;Inherit;True;1;0;FLOAT;0;False;1;FLOAT;0
@@ -71,16 +71,16 @@ Node;AmplifyShaderEditor.SimpleSubtractOpNode;18;-1801.377,820.9965;Inherit;True
 Node;AmplifyShaderEditor.SimpleDivideOpNode;20;-1521.992,845.7336;Inherit;True;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0
 Node;AmplifyShaderEditor.CommentaryNode;28;-2419.485,-372.0081;Inherit;False;1681.022;961.932;Crea un degradado hacia el centro;10;7;8;5;4;2;6;26;3;29;37;;1,1,1,1;0;0
 Node;AmplifyShaderEditor.SaturateNode;22;-1309.544,816.6312;Inherit;True;1;0;FLOAT;0;False;1;FLOAT;0
-Node;AmplifyShaderEditor.RangedFloatNode;7;-2333.085,468.024;Inherit;False;Property;_Scale;Scale;3;0;Create;True;0;0;0;False;0;False;1.66;0;0;0;0;1;FLOAT;0
+Node;AmplifyShaderEditor.RangedFloatNode;7;-2324.839,212.4077;Inherit;False;Property;_Scale;Scale;3;0;Create;True;0;0;0;False;0;False;1.66;0;0;0;0;1;FLOAT;0
 Node;AmplifyShaderEditor.OneMinusNode;23;-1097.159,820.3605;Inherit;True;1;0;FLOAT;0;False;1;FLOAT;0
-Node;AmplifyShaderEditor.RangedFloatNode;5;-2369.485,217.1234;Inherit;False;Property;_Bias;Bias;1;0;Create;True;0;0;0;False;0;False;0;0;0;0;0;1;FLOAT;0
-Node;AmplifyShaderEditor.RangedFloatNode;6;-2327.885,336.7234;Inherit;False;Property;_Power;Power;2;0;Create;True;0;0;0;False;0;False;1;0;0;0;0;1;FLOAT;0
-Node;AmplifyShaderEditor.ColorNode;8;-1891.786,-322.0081;Inherit;False;Property;_CenterColor;CenterColor;4;0;Create;True;0;0;0;False;0;False;1,1,1,0;0,0,0,0;True;0;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
-Node;AmplifyShaderEditor.ColorNode;2;-1963.106,-134.6301;Inherit;False;Property;_BaseCOlor;BaseCOlor;0;0;Create;True;0;0;0;False;0;False;0.1817818,0.8250467,0.8962264,0;0,0,0,0;True;0;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
+Node;AmplifyShaderEditor.RangedFloatNode;5;-2321.039,61.48621;Inherit;False;Property;_Bias;Bias;1;0;Create;True;0;0;0;False;0;False;0;0;0;0;0;1;FLOAT;0
+Node;AmplifyShaderEditor.RangedFloatNode;6;-2313.454,136.7655;Inherit;False;Property;_Power;Power;2;0;Create;True;0;0;0;False;0;False;1;0;0;0;0;1;FLOAT;0
+Node;AmplifyShaderEditor.ColorNode;8;-1891.786,-322.0081;Inherit;False;Property;_MainColor;MainColor;4;0;Create;True;0;0;0;False;0;False;1,1,1,0;0,0,0,0;True;0;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
 Node;AmplifyShaderEditor.RegisterLocalVarNode;25;-880.8163,820.5446;Inherit;True;Transparency;-1;True;1;0;FLOAT;0;False;1;FLOAT;0
-Node;AmplifyShaderEditor.FresnelNode;3;-2006.059,121.8247;Inherit;True;Standard;WorldNormal;ViewDir;False;False;5;0;FLOAT3;0,0,1;False;4;FLOAT3;0,0,0;False;1;FLOAT;0;False;2;FLOAT;1;False;3;FLOAT;5;False;1;FLOAT;0
-Node;AmplifyShaderEditor.LerpOp;4;-1515.552,-120.042;Inherit;False;3;0;COLOR;0,0,0,0;False;1;COLOR;0,0,0,0;False;2;FLOAT;0;False;1;COLOR;0
+Node;AmplifyShaderEditor.FresnelNode;3;-2015.336,44.52158;Inherit;True;Standard;WorldNormal;ViewDir;False;False;5;0;FLOAT3;0,0,1;False;4;FLOAT3;0,0,0;False;1;FLOAT;0;False;2;FLOAT;1;False;3;FLOAT;5;False;1;FLOAT;0
+Node;AmplifyShaderEditor.ColorNode;2;-1963.106,-134.6301;Inherit;False;Property;_CenterColor;CenterColor;0;0;Create;True;0;0;0;False;0;False;0.1817818,0.8250467,0.8962264,0;0,0,0,0;True;0;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
 Node;AmplifyShaderEditor.GetLocalVarNode;26;-1477.22,31.75965;Inherit;False;25;Transparency;1;0;OBJECT;;False;1;FLOAT;0
+Node;AmplifyShaderEditor.LerpOp;4;-1515.552,-120.042;Inherit;False;3;0;COLOR;0,0,0,0;False;1;COLOR;0,0,0,0;False;2;FLOAT;0;False;1;COLOR;0
 Node;AmplifyShaderEditor.SimpleMultiplyOpNode;37;-1197.42,-125.2454;Inherit;False;2;2;0;COLOR;0,0,0,0;False;1;FLOAT;0;False;1;COLOR;0
 Node;AmplifyShaderEditor.RegisterLocalVarNode;29;-981.4258,-132.8913;Inherit;False;Color;-1;True;1;0;COLOR;0,0,0,0;False;1;COLOR;0
 Node;AmplifyShaderEditor.GetLocalVarNode;27;-507.767,87.56259;Inherit;False;25;Transparency;1;0;OBJECT;;False;1;FLOAT;0
@@ -98,8 +98,8 @@ WireConnection;25;0;23;0
 WireConnection;3;1;5;0
 WireConnection;3;2;6;0
 WireConnection;3;3;7;0
-WireConnection;4;0;8;0
-WireConnection;4;1;2;0
+WireConnection;4;0;2;0
+WireConnection;4;1;8;0
 WireConnection;4;2;3;0
 WireConnection;37;0;4;0
 WireConnection;37;1;26;0
@@ -107,4 +107,4 @@ WireConnection;29;0;37;0
 WireConnection;0;2;30;0
 WireConnection;0;9;27;0
 ASEEND*/
-//CHKSM=9605ABD57F0E719AED3217F884FA40F6884D892C
+//CHKSM=15D8127AF25B3C921FFEAA6368A7C00C68A6258E
