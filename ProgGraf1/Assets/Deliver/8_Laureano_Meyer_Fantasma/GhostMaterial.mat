@@ -77,7 +77,7 @@ Material:
     - _Offset: 0.66
     - _Parallax: 0.02
     - _Power: 1.09
-    - _Scale: -0.07
+    - _Scale: 1
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
@@ -86,8 +86,9 @@ Material:
     - __dirty: 0
     m_Colors:
     - _ASEOutlineColor: {r: 0.64627093, g: 0.9716981, b: 0.96532494, a: 0}
-    - _BaseCOlor: {r: 0.6853863, g: 0.86941886, b: 0.9622642, a: 0}
-    - _CenterColor: {r: 0.85898006, g: 0.9083606, b: 0.9150943, a: 0}
+    - _BaseCOlor: {r: 0.7350349, g: 0.9245283, b: 0.61489856, a: 0}
+    - _CenterColor: {r: 0.66969615, g: 0.8584906, b: 0.56287825, a: 0}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _MainColor: {r: 0.09836905, g: 0.6698113, b: 0, a: 0}
   m_BuildTextureStacks: []
