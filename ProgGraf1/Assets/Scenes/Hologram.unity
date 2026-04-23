@@ -355,7 +355,7 @@ Transform:
   m_GameObject: {fileID: 947376740}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.01, y: 2.588, z: 0}
+  m_LocalPosition: {x: -0.53, y: 2.588, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -387,7 +387,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 121d8caded911af40aef4b4880f7c84b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.48
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 121d8caded911af40aef4b4880f7c84b, type: 3}
       propertyPath: m_LocalPosition.y
@@ -899,11 +899,43 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4409867164153912819, guid: 121d8caded911af40aef4b4880f7c84b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.3277
+      value: 0.0073
+      objectReference: {fileID: 0}
+    - target: {fileID: 4409867164153912819, guid: 121d8caded911af40aef4b4880f7c84b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.056165174
       objectReference: {fileID: 0}
     - target: {fileID: 4409867164153912819, guid: 121d8caded911af40aef4b4880f7c84b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0
+      value: 0.128
+      objectReference: {fileID: 0}
+    - target: {fileID: 4409867164153912819, guid: 121d8caded911af40aef4b4880f7c84b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.93970996
+      objectReference: {fileID: 0}
+    - target: {fileID: 4409867164153912819, guid: 121d8caded911af40aef4b4880f7c84b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.34147012
+      objectReference: {fileID: 0}
+    - target: {fileID: 4409867164153912819, guid: 121d8caded911af40aef4b4880f7c84b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.000000018626451
+      objectReference: {fileID: 0}
+    - target: {fileID: 4409867164153912819, guid: 121d8caded911af40aef4b4880f7c84b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.018529944
+      objectReference: {fileID: 0}
+    - target: {fileID: 4409867164153912819, guid: 121d8caded911af40aef4b4880f7c84b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -39.924
+      objectReference: {fileID: 0}
+    - target: {fileID: 4409867164153912819, guid: 121d8caded911af40aef4b4880f7c84b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -0.945
+      objectReference: {fileID: 0}
+    - target: {fileID: 4409867164153912819, guid: 121d8caded911af40aef4b4880f7c84b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 2.603
       objectReference: {fileID: 0}
     - target: {fileID: 4560279014762108894, guid: 121d8caded911af40aef4b4880f7c84b, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -1106,7 +1138,18 @@ PrefabInstance:
       value: Spider_Man_Right_Leg
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: -3086659398938473367, guid: 121d8caded911af40aef4b4880f7c84b, type: 3}
+    - {fileID: 5875215369887378877, guid: 121d8caded911af40aef4b4880f7c84b, type: 3}
+    - {fileID: 5141464487412920087, guid: 121d8caded911af40aef4b4880f7c84b, type: 3}
+    - {fileID: -2601757079126112780, guid: 121d8caded911af40aef4b4880f7c84b, type: 3}
+    - {fileID: -6341457145767934780, guid: 121d8caded911af40aef4b4880f7c84b, type: 3}
+    - {fileID: -4758897720643628475, guid: 121d8caded911af40aef4b4880f7c84b, type: 3}
+    - {fileID: 2244903785497231455, guid: 121d8caded911af40aef4b4880f7c84b, type: 3}
+    - {fileID: 2212536538829778528, guid: 121d8caded911af40aef4b4880f7c84b, type: 3}
+    - {fileID: -8002320823922896113, guid: 121d8caded911af40aef4b4880f7c84b, type: 3}
+    - {fileID: -6314562582185515128, guid: 121d8caded911af40aef4b4880f7c84b, type: 3}
+    - {fileID: -5561807291636167534, guid: 121d8caded911af40aef4b4880f7c84b, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 121d8caded911af40aef4b4880f7c84b, type: 3}
